@@ -1,6 +1,6 @@
-## Sweet Match-Up 🍬
+## Fluffy flip🎀
 
-Sweet Match-Up is a fun and engaging memory card-flipping game where players need to match pairs of cards. The game features cute and colorful cards, with a pink and white theme, offering a delightful experience for all ages. It's perfect for testing your memory while having fun!
+Fluffy flip is a fun and engaging memory card-flipping game where players need to match pairs of cards. The game features cute and colorful cards, with a pink and white theme, offering a delightful experience for all ages. It's perfect for testing your memory while having fun!
 
 ## Project Description
 
@@ -21,6 +21,7 @@ Sound Effects: Fun sound effects for flipping and matching cards.
 Game Reset: Start a new game with a simple click of a button.
 
 ## How to Play
+
 Start the Game: Click the "Start Game" button to begin.
 
 Flip Cards: Click on a card to flip it. Try to match two cards that have the same image.
