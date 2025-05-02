@@ -59,4 +59,4 @@ Moves Counter: The number of moves is displayed, encouraging you to play better.
 
 ## Live Preview
 
-Here’s a preview of the game:
+Here’s a preview of the game: - 👀 [Live Preview](https://liveyana-r-d.github.io/Sweet-Match-Up/)
