@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Match-Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/kitty.jpg">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <h1>🧠 Sweet Match-Up</h1>
+      <div class="controls">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy (4x4)</option>
+          <option value="hard">Hard (6x6)</option>
+        </select>
+        <button id="new-game">New Game</button>
+      </div>
+      <div class="stats">
+        <p>Moves: <span id="move-count">0</span></p>
+        <p>Time: <span id="timer">00:00</span></p>
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+
+    <div class="grid" id="card-grid"></div>
+
+    <div id="congrats-message" class="hidden">
+      <h2>🎉 Congratulations!</h2>
+      <p>You matched all the cards!</p>
+      <p>Your Score: <span id="final-score">0</span></p>
+    </div>
+  </div>
+
+  <audio id="flip-sound" src="sounds/flip.wav" preload="auto"></audio>
+  <audio id="match-sound" src="sounds/match.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="sounds/win.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* allow vertical scroll only when needed */
+}
+
+body {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: start; /* align to top so full grid fits in scroll */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.game-container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.grid.easy {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid.hard {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-front {
+  background-image: url("images/HK.jpg");
+  color: transparent;
+}
+
+.card-back {
+  background: url("images/card.jpg");
+  transform: rotateY(180deg);
+}
+
+#congrats-message {
+  margin-top: 20px;
+  color: #2e7d32;
+}
+
+.hidden {
+  display: none;
+}
+
+/* RESPONSIVE OVERRIDE FOR SMALL SCREENS */
+@media (max-width: 500px) {
+  .grid.easy {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid.hard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
